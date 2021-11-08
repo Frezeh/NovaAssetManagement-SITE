@@ -24,7 +24,6 @@ export default function Etf(props) {
   const dispatch = useDispatch();
 
   const handleComment = () => {
-    //alert("Current State is: " + JSON.stringify(comment));
     dispatch(postEtfSale(comment));
     setShowModal(!showModal);
   }
@@ -33,10 +32,7 @@ export default function Etf(props) {
     setShowModal(!showModal);
   }
 
-  const RenderCard = ({ item, isLoading, errMess }) => {
-
-    //If item designation is not null, i.e if item designation exists, then I will then render it as CardSubtitle, otherwise, 
-    //will render it as null
+  const RenderCard = ({ item }) => {
     return (
       <FadeTransform in transformProps={{ exitTransform: 'scale(0.5) translateY(-50%)' }}>
         <Card>

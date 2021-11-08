@@ -10,7 +10,7 @@ import 'aos/dist/aos.css';
 import { fetchEtf, fetchNdf, fetchNmmf } from '../redux/ActionCreators';
 import { useSelector, useDispatch } from 'react-redux';
 
-function Home(props) {
+function Home() {
 
   useEffect(() => {
     AOS.init({
@@ -72,7 +72,7 @@ function Home(props) {
       );
   }
 
-  const RenderNdfCard = ({ item, isLoading, errMess }) => {
+  const RenderNdfCard = ({ item }) => {
 
     if (item.isLoading) {
       return (
@@ -172,7 +172,7 @@ function Home(props) {
 
           <div className="row" data-aos="fade-up" style={{ paddingBottom: 30 }}>
             <div className="col-md-5">
-              <img src="assets/images/features-1.svg" class="img-fluid" alt="" />
+              <img src="assets/images/features-1.svg" className="img-fluid" alt="" />
             </div>
             <div className="col-md-7 pt-4">
               <h3>Services</h3>
@@ -208,7 +208,7 @@ function Home(props) {
 
           <div className="row" data-aos="fade-up" style={{ paddingBottom: 30 }}>
             <div className="col-md-5">
-              <img src="assets/images/features-3.svg" class="img-fluid" alt="" />
+              <img src="assets/images/features-3.svg" className="img-fluid" alt="" />
             </div>
             <div className="col-md-7 pt-5">
               <h3>Ancillary Services</h3>
@@ -244,7 +244,6 @@ function Home(props) {
   }
 
   const Etf = etf.etf.map((etf) => {
-
     return (
       <div key={etf._id} className="col-12 col-md-4 ">
         <RenderEtfCard item={etf} />
@@ -254,7 +253,6 @@ function Home(props) {
   });
 
   const Ndf = ndf.ndf.map((ndf) => {
-
     return (
       <div key={ndf._id} className="col-12 col-md-4 ">
         <RenderNdfCard item={ndf} />
@@ -264,7 +262,6 @@ function Home(props) {
   });
 
   const Nmmf = nmmf.nmmf.map((nmmf) => {
-
     return (
       <div key={nmmf._id} className="col-12 col-md-4 ">
         <RenderNmmfCard item={nmmf} />
@@ -274,24 +271,14 @@ function Home(props) {
   });
 
   return (
-    <div className="container">
-      <p></p>
+    <div>
       <Hero />
-      <p></p>
-      <p></p>
-      <p></p>
-      <div className="row align-items-start">
+      <div className="row align-items-start" style={{ paddingTop: 50, paddingBottom: 50 }}>
         {Ndf}
         {Nmmf}
         {Etf}
       </div>
-      <p></p>
-      <p></p>
-      <p></p>
       <Features />
-      <p></p>
-      <p></p>
-      <p></p>
     </div>
   );
 }

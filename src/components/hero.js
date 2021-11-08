@@ -55,9 +55,9 @@ const Hero = () => {
           Welcome to Nova Asset Management
 
           </Typography>
-          <p style={{                  paddingBottom: 50
-}}>          We Offer Mutual Funds, Structured Products, Portfolio Administration Service and Trustee Services.
-</p>
+          <p style={{ paddingBottom: 50}}>          
+          We Offer Mutual Funds, Structured Products, Portfolio Administration Service and Trustee Services.
+          </p>
           <Link to={`/register`}>
             <button className="btn btn-md btn-info" style={{
                   width: 250,

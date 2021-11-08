@@ -23,7 +23,6 @@ export default function Nmmf(props) {
   const dispatch = useDispatch();
 
   const handleComment = () => {
-    //alert("Current State is: " + JSON.stringify(comment));
     dispatch(postNmmfSale(comment));
     setShowModal(!showModal);
   }

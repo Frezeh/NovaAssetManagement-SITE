@@ -39,7 +39,7 @@ function App() {
 
   return (
     <>
-    <div style={{backgroundColor: "white"}}>
+    <div style={{backgroundColor: "white" }}>
     <CssBaseline />
       <Main />
       <Container fixed>

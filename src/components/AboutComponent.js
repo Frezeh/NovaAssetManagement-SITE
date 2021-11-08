@@ -11,67 +11,42 @@ import 'aos/dist/aos.css';
 import { fetchLeaders } from '../redux/ActionCreators';
 import { useSelector, useDispatch } from 'react-redux';
 
-/* function RenderLeader({leader}) {
-    return(
-        <Media tag="li">
-            <Media left middle>
-                <Media object src={baseUrl + leader.image} alt={leader.name} />
-            </Media>
-            <Media body className="ml-5">
-                <Media heading>{leader.name}</Media>
-                <p>{leader.designation}</p>
-                <p>{leader.description}</p>
-            </Media>
-        </Media>
-    );
-
-} */
-
 function LeaderList() {
-
     return (
         <section className="facts section-bg" data-aos="fade-up">
             <div className="container">
-
                 <div className="row counters">
-
                     <div className="col-lg-3 col-6 text-center">
                         <span>
                             <CountUp end={500} duration={5} style={{ fontSize: 70 }} />
                         </span>
                         <p>Clients</p>
                     </div>
-
                     <div className="col-lg-3 col-6 text-center">
                         <span>
                             <CountUp end={5} duration={5} style={{ fontSize: 70 }} />
                         </span>
                         <p>Products</p>
                     </div>
-
                     <div className="col-lg-3 col-6 text-center">
                         <span>
                             <CountUp end={100} duration={5} style={{ fontSize: 70 }} />
                         </span>
                         <p>Hours Of Support</p>
                     </div>
-
                     <div className="col-lg-3 col-6 text-center">
                         <span>
                             <CountUp end={20} duration={5} style={{ fontSize: 70 }} />
                         </span>
                         <p>Hard Workers</p>
                     </div>
-
                 </div>
-
             </div>
         </section>
     );
 }
 
 function About(props) {
-
     useEffect(() => {
         AOS.init({
             duration: 2000
@@ -154,33 +129,28 @@ function About(props) {
                                     <div>
                                         <Progress animated bar color="success" value="100" >
                                             Uniqueness 100%
-        </Progress>
+                                        </Progress>
                                         <Progress animated bar color="info" value="100" >
                                             Passion 100%
-        </Progress>
+                                        </Progress>
                                         <Progress animated bar color="warning" value="100" >
                                             Leadership 100%
-        </Progress>
+                                        </Progress>
                                         <Progress animated bar color="danger" value="100" >
                                             Integrity 100%
-        </Progress>
+                                        </Progress>
                                         <Progress animated bar color="primary" value="100" >
                                             Fairness 100%
-        </Progress>
-        <Progress animated bar color="secondary" value="100" >
+                                        </Progress>
+                                        <Progress animated bar color="secondary" value="100" >
                                             Teamwork 100%
-        </Progress>
-
-
+                                        </Progress>
                                     </div>
-
                                 </div>
                             </section>
-
                         </CardBody>
                     </Card>
                 </div>
-               
                 <div className="col-12 col-md-6">
                     <Card>
                         <CardBody className="bg-faded">
@@ -194,14 +164,14 @@ function About(props) {
                     </Card>
                 </div>
             </div>
-            
+
             <div className="row row-content">
                 <div className="col-12">
                     <h2 >Our Achievements</h2>
                 </div>
                 <LeaderList />
             </div>
-           
+
             <div className="row row-content">
                 <div className="col-12">
                     <h2>Corporate Leadership</h2>

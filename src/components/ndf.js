@@ -1,10 +1,9 @@
 import React, { useEffect, useState} from 'react';
-//import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import Card from 'react-bootstrap/Card'
 import { FadeTransform } from 'react-animation-components';
 import { baseUrl } from '../shared/baseUrl';
 import { Loading } from './LoadingComponent';
-import { Modal, ModalHeader, ModalBody, FormGroup, Input, Label, Button, Col, Row, Form } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, FormGroup, Input, Label, Button, Form } from 'reactstrap';
 import { fetchNdf, postNdfSale } from '../redux/ActionCreators';
 import { useSelector, useDispatch } from 'react-redux';
 
