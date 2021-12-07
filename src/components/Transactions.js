@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from "react";
 import { FadeTransform } from "react-animation-components";
 import { baseUrl } from "../shared/baseUrl";
@@ -30,7 +31,6 @@ import { useGutterBorderedGridStyles } from "@mui-treasury/styles/grid/gutterBor
 export default function Transactions() {
   useEffect(() => {
     User();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const dispatch = useDispatch();

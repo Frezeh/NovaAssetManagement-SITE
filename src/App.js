@@ -6,7 +6,6 @@ import Contact from './components/ContactComponent';
 import Footer from './components/FooterComponent';
 import Register from './components/register';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import './App.css';
@@ -42,7 +41,6 @@ function App() {
     <div style={{backgroundColor: "white" }}>
     <CssBaseline />
       <Main />
-      {/* <Container fixed> */}
         <TransitionGroup>
           <CSSTransition key={location.key} classNames="page" timeout={300}>
             <Switch>
@@ -79,7 +77,6 @@ function App() {
             </Switch>
           </CSSTransition>
         </TransitionGroup>
-      {/* </Container> */}
       <Footer />
     </div>
     </>
