@@ -5,7 +5,6 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap-social/bootstrap-social.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import 'aos/dist/aos.css';
 import { Provider } from 'react-redux';
 import { ConfigureStore } from './redux/configureStore';
 

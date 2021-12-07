@@ -29,41 +29,31 @@ function IndicatorBody() {
   const theme = useTheme();
 
   const pieData = {
-    labels: ['Domestic', 'International', 'Bonds', 'Cash'],
+    labels: ["Domestic", "International", "Bonds", "Cash"],
     datasets: [
       {
-        label: 'Asset Allocation',
+        label: "Asset Allocation",
         data: [20.1, 48.5, 14.4, 17],
-        backgroundColor: [
-          'blue',
-          'red',
-          'gray',
-          'yellow',
-        ],
-        borderColor: [
-          'blue',
-          'red',
-          'gray',
-          'yellow',
-        ],
+        backgroundColor: ["blue", "red", "gray", "yellow"],
+        borderColor: ["blue", "red", "gray", "yellow"],
         borderWidth: 1,
       },
     ],
   };
-  
-  const lineData= {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+
+  const lineData = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "June"],
     datasets: [
       {
-        label: '# performance',
+        label: "# performance",
         data: [15000, 16000, 13000, 22000, 20000, 25000],
         fill: false,
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgba(255, 99, 132, 0.2)',
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgba(255, 99, 132, 0.2)",
       },
     ],
   };
-  
+
   const options = {
     scales: {
       yAxes: [
@@ -75,7 +65,7 @@ function IndicatorBody() {
       ],
     },
   };
-  
+
   return (
     <>
       <IndicatorHeader />
@@ -96,9 +86,7 @@ function IndicatorBody() {
             marginBottom="3rem!important"
             classes={{ root: classes.gridItemRoot }}
           >
-            <Card
-              
-            >
+            <Card>
               <CardHeader
                 subheader={
                   <Grid
@@ -125,7 +113,7 @@ function IndicatorBody() {
                         marginBottom="0!important"
                       >
                         <Box component="span" color={theme.palette.white}>
-                         Performance
+                          Performance
                         </Box>
                       </Box>
                     </Grid>
@@ -135,10 +123,7 @@ function IndicatorBody() {
               ></CardHeader>
               <CardContent>
                 <Box position="relative" height="relative">
-                  <Line
-                    data={lineData}
-                    options={options}
-                  />
+                  <Line data={lineData} options={options} />
                 </Box>
               </CardContent>
             </Card>
@@ -171,9 +156,7 @@ function IndicatorBody() {
               ></CardHeader>
               <CardContent>
                 <Box position="relative" height="relative">
-                  <Pie
-                    data={pieData}
-                  />
+                  <Pie data={pieData} />
                 </Box>
               </CardContent>
             </Card>
@@ -229,7 +212,7 @@ function IndicatorBody() {
                 }
                 classes={{ root: classes.cardHeaderRoot }}
               ></CardHeader>
-              <TableContainer >
+              <TableContainer>
                 <Box
                   component={Table}
                   alignItems="center"
@@ -244,7 +227,7 @@ function IndicatorBody() {
                             " " +
                             classes.tableCellRootHead,
                         }}
-                        style={{fontSize: 'bold'}}
+                        style={{ fontSize: "bold" }}
                       >
                         FUND NAME
                       </TableCell>
@@ -266,7 +249,7 @@ function IndicatorBody() {
                             classes.tableCellRootHead,
                         }}
                       >
-                       STATUS
+                        STATUS
                       </TableCell>
                       <TableCell
                         classes={{

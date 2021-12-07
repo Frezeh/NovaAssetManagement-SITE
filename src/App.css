@@ -20,37 +20,16 @@
     transition: all 300ms ease-out;
 }
 
-html, body {
+body {
     margin: 0;
     padding: 0;
-}
-.row-header{
-    margin:0px auto;
-    padding:0px auto;
-    
-}
-
-.row-content {
-    margin:0px auto;
-    padding: 50px 0px 50px 0px;
-    border-bottom: 1px ridge;
-    min-height:400px;
-}
-
-body {
     width: 100%;
 }
 
 .footer{
     background-color: #4682B4;
     margin:0px auto;
-    padding: 20px 0px 20px 0px;
-}
-
-.jumbotron {
-    padding:70px 30px 70px 30px;
-    margin:0px auto;
-    color:#fff;
+    padding-top: 20px 0px 20px 0px;
 }
 
 .videobackground {
@@ -61,33 +40,8 @@ body {
     height: auto;
 }
 
-.carousel {
-    padding:70px 30px 70px 30px;
-    margin:0px auto;
-    background: white ;
-    color:black;
-    height: 100%;
-    border-radius:10%
-}
-
-.carousel-item {
-    height: 300px;
-
-}
-
-.carousel-caption {
-    color:black;
-
-}
-
 address{
     font-size:80%;
     margin:0px;
     color:#0f0f0f;
-}
-
-.navbar-toggler {
-    color:#0f0f0f;
-    background-color: #4682B4;
-
 }

@@ -42,7 +42,7 @@ function App() {
     <div style={{backgroundColor: "white" }}>
     <CssBaseline />
       <Main />
-      <Container fixed>
+      {/* <Container fixed> */}
         <TransitionGroup>
           <CSSTransition key={location.key} classNames="page" timeout={300}>
             <Switch>
@@ -79,7 +79,7 @@ function App() {
             </Switch>
           </CSSTransition>
         </TransitionGroup>
-      </Container>
+      {/* </Container> */}
       <Footer />
     </div>
     </>
