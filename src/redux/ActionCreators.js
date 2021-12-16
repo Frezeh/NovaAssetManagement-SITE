@@ -452,8 +452,7 @@ export const postFeedback = (values) => (dispatch) => {
     );
 };
 
-export const fetchUser = () => (dispatch) => {
-  const id = "auth.id";
+export const fetchUser = (id) => (dispatch) => {
   dispatch(userLoading());
 
   return fetch(baseUrl + `users/${id}`)

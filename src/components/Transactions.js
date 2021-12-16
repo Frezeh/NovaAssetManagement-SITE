@@ -4,12 +4,7 @@ import { FadeTransform } from "react-animation-components";
 import { baseUrl } from "../shared/baseUrl";
 import { Loading } from "./LoadingComponent";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  addUser,
-  userFailed,
-  userLoading,
-  addHistory,
-} from "../redux/ActionCreators";
+import { fetchUser } from "../redux/ActionCreators";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardContent";
@@ -29,45 +24,16 @@ import Divider from "@material-ui/core/Divider";
 import { useGutterBorderedGridStyles } from "@mui-treasury/styles/grid/gutterBordered";
 
 export default function Transactions() {
+
   useEffect(() => {
-    User();
+    let id = auth.id
+    dispatch(fetchUser(id))
   }, []);
 
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const auth = useSelector((state) => state.auth);
   const history = useSelector((state) => state.history);
-
-  const User = () => {
-    let adress = `${auth.id}`;
-
-    dispatch(userLoading());
-
-    return fetch(baseUrl + `users/${adress}`)
-      .then(
-        (response) => {
-          if (response.ok) {
-            return response;
-          } else {
-            var error = new Error(
-              "Error " + response.status + ": " + response.statusText
-            );
-            error.response = response;
-            throw error;
-          }
-        },
-        (error) => {
-          var errmess = new Error(error.message);
-          throw errmess;
-        }
-      )
-      .then((response) => response.json())
-      .then((user) => {
-        dispatch(addUser(user));
-        dispatch(addHistory(user));
-      })
-      .catch((error) => dispatch(userFailed(error.message)));
-  };
 
   const useStyles = makeStyles(({ spacing, palette }) => ({
     card: {
